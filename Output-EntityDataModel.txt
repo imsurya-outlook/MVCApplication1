@@ -1,0 +1,4 @@
+﻿Generated model file: EmployeeModel.edmx.
+Loading metadata from the database took 00:00:04.3976725.
+Generating the model took 00:00:02.4433425.
+Added the connection string to the Web.Config file.

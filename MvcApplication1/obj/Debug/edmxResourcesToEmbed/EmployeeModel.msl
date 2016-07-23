@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="EmployeeModel" />
+  <Alias Key="Target" Value="EmployeeModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="EmployeeModelContainer" StorageEntityContainer="EmployeeModelStoreContainer">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="EmployeeModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Departmentname" ColumnName="Departmentname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EmployeeModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetEmpoyeeDetails" FunctionName="EmployeeModel.Store.GetEmpoyeeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmployeeModel.GetEmpoyeeDetails_Result">
+          <ScalarProperty Name="Employeeid" ColumnName="Employeeid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="departmentid" ColumnName="departmentid" />
+          <ScalarProperty Name="departname" ColumnName="departname" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="DepartmentAddress" ColumnName="DepartmentAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetEmpoyeeDetailsById" FunctionName="EmployeeModel.Store.GetEmpoyeeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmployeeModel.GetEmpoyeeDetails_Result">
+          <ScalarProperty Name="Employeeid" ColumnName="Employeeid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="departmentid" ColumnName="departmentid" />
+          <ScalarProperty Name="departname" ColumnName="departname" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="DepartmentAddress" ColumnName="DepartmentAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

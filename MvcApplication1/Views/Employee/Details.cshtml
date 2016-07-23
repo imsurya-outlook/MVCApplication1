@@ -1,0 +1,42 @@
+﻿@model MvcApplication1.Models.GetEmpoyeeDetails_Result
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.departname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.departname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartmentAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartmentAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.salary)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Employeeid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
